@@ -24,7 +24,8 @@ int main()
     /*
     Reads in the input file with the Graph's data.
     Separates each line of the input file into a list.
-    Goes through the input file and finds the total number of starting nodes; then adds these primary nodes to a list named Nodes.
+    Goes through the input file and finds the total number of starting nodes; 
+    then adds these primary nodes to a list named Nodes.
     */
     std::string myText;
     std::ifstream MyFile("input.txt");
