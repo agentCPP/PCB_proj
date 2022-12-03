@@ -27,7 +27,8 @@ int main()
     /*
     Reads in the input file with the Graph's data.
     Separates each line of the input file into a list.
-    Goes through the input file and finds the total number of starting nodes; then adds these primary nodes to a list named Nodes.
+    Goes through the input file and finds the total number of starting nodes; 
+    then adds these primary nodes to a list named Nodes.
     */
     std::string myText;
     std::ifstream MyFile("input.txt");
@@ -52,7 +53,8 @@ int main()
 
 
     /*
-    Goes through the list of nodes and creates the edges between nodes based on input file data.
+    Goes through the list of nodes and creates the edges between 
+    nodes based on input file data.
     */
     int i = 0;
     int j = 0;
@@ -82,14 +84,16 @@ int main()
         }
 
     }
-    //Graph should theoretically be fully created now. All that is left is to check for planarity and output graph.
+    //Graph should theoretically be fully created now. 
+    //All that is left is to check for planarity and output graph.
 
 
     /*
     Checks if the inputted graph is planar
     If it is planar, create a planar embedding and outputs the graph.
     If it is not planar, divide the graph into subdvisions and output the subdivisions.
-    For both cases, the output is a GML file that requires separate software to view in the form of a graph.
+    For both cases, the output is a GML file that requires 
+    separate software to view in the form of a graph.
     */
     if (isPlanar(G)) {
         planarEmbedPlanarGraph(G);
@@ -109,7 +113,8 @@ int main()
 
 /*
 Takes as input a string with only one space.
-Separates the string into a list where the first element is the part of the string to the left of the space and vice versa.
+Separates the string into a list where the first element is the part of the 
+string to the left of the space and vice versa.
 It then returns the list of separated items.
 */
 using namespace std;
@@ -127,7 +132,8 @@ list<string> split(string s) {
 }
 
 /*
-Takes as input a list of items you want to search through and a specific item you want to search for.
+Takes as input a list of items you want to search through and a 
+specific item you want to search for.
 If the item you are searching for is in the list, returns true.
 If the item you are searching for is NOT in the list, returns false.
 */
