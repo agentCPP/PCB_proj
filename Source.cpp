@@ -11,6 +11,9 @@
 #include <ogdf/planarity/PlanarSubgraphFast.h>
 #include <ogdf/planarity/VariableEmbeddingInserter.h>
 
+//Function prototypes for split and find.
+std::list<std::string> split(std::string s);
+bool find(std::string item, std::list<std::string> searching);
 
 using namespace ogdf;
 
@@ -24,8 +27,7 @@ int main()
     /*
     Reads in the input file with the Graph's data.
     Separates each line of the input file into a list.
-    Goes through the input file and finds the total number of starting nodes; 
-    then adds these primary nodes to a list named Nodes.
+    Goes through the input file and finds the total number of starting nodes; then adds these primary nodes to a list named Nodes.
     */
     std::string myText;
     std::ifstream MyFile("input.txt");
@@ -110,8 +112,9 @@ Takes as input a string with only one space.
 Separates the string into a list where the first element is the part of the string to the left of the space and vice versa.
 It then returns the list of separated items.
 */
-std::list<string> split(string s) {
-    std::list<std::string> output;
+using namespace std;
+list<string> split(string s) {
+    list<string> output;
     char separator = ' ';
     for (int i = 0; i < s.length(); i++) {
         if (s[i] == separator) {
@@ -129,7 +132,7 @@ If the item you are searching for is in the list, returns true.
 If the item you are searching for is NOT in the list, returns false.
 */
 
-bool find(std::string item, std::list<std::string> searching) {
+bool find(string item, list<string> searching) {
     for (auto it = searching.begin(); it != searching.end(); ++it) {
         if (item == *it) {
             return true;
